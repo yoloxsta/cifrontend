@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Frontend</title>
+</head>
+<body>
+    <h1 id="message"></h1>
+    <button onclick="fetchMessage()">Click Me</button>
+
+    <script>
+        async function fetchMessage() {
+            const response = await fetch('http://localhost:3000/message');
+            const data = await response.json();
+            document.getElementById('message').innerText = data.message;
+        }
+    </script>
+</body>
+</html>
