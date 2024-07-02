@@ -11,7 +11,7 @@
 
     <script>
         async function fetchMessage() {
-            const response = await fetch('http://localhost:3000/message');
+            const response = await fetch('http://stabackend.yomafleet.dev:3000/message');
             const data = await response.json();
             document.getElementById('message').innerText = data.message;
         }
